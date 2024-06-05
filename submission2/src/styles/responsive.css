@@ -1,0 +1,153 @@
+/* Style untuk layar lebar (min-width: 780px) */
+@media screen and (min-width: 780px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nav-list {
+    display: flex;
+  }
+
+  .hamburg-menu {
+    display: none;
+  }
+}
+
+/* Style untuk layar lebih kecil (max-width: 780px) */
+@media screen and (max-width: 780px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-list {
+    display: flex;
+  }
+
+  .titleBar {
+    width: auto;
+  }
+
+  .list-link ul {
+    gap: 28px;
+    height: 44px;
+    min-width: 44px;
+  }
+
+  .list-link ul a {
+    display: flex;
+    height: 44px;
+    min-width: 44px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hamburg-menu {
+    display: none;
+  }
+}
+
+/* Style untuk layar lebih kecil (max-width: 768px) */
+@media (max-width: 768px) {
+   .hero h1 {
+    font-size: calc(var(--h-font-size) * 0.75);
+    margin-bottom: 8px;
+  }
+  
+  .hero p {
+    font-size: calc(var(--h1-font-size) * 0.75);
+    letter-spacing: normal;
+  }
+}
+
+/* Style untuk layar lebih kecil (max-width: 576px) */
+@media screen and (max-width: 576px) {
+  #list {
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    background-color: var(--body-color);
+    padding: 20px;
+    z-index: 100;
+  }
+
+   .hero h1 {
+    font-size: calc(var(--h-font-size) * 0.6);
+    margin-bottom: 6px;
+  }
+  
+  .hero p {
+    font-size: calc(var(--h1-font-size) * 0.6);
+    letter-spacing: normal;
+  }
+
+  .titleBar {
+    width: auto;
+  }
+
+  .nav-list {
+    display: flex;
+  }
+
+  .hamburg-menu {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    box-sizing: border-box;
+  }
+
+  .nav-list ul {
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    top: 0;
+    height: 50%;
+    background-color: var(--black-color);
+    z-index: 1;
+    padding: 65px 0px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-list ul.open {
+    transform: translateX(0);
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .food_restaurant_menu,
+  .drink_restaurant_menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--first-color);
+    padding: 2%;
+    margin-bottom: 2%;
+  }
+
+  .customer-reviews {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: var(--first-color);
+    padding: 2%;
+  }
+}
+
+/* Style untuk layar sangat kecil (max-width: 480px) */
+@media (max-width: 480px) {
+   .hero h1 {
+    font-size: calc(var(--h-font-size) * 0.5);
+    margin-bottom: 5px;
+  }
+  
+  .hero p {
+    font-size: calc(var(--h1-font-size) * 0.5);
+    letter-spacing: normal;
+  }
+}
