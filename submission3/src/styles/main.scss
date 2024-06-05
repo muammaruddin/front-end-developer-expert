@@ -1,0 +1,471 @@
+$bgbody-color: #2a2e39;
+$dark: hsl(0, 0%, 6%);
+$poesten-one: "Poetsen One";
+$coklat: rgb(112, 82, 62);
+$coksu: rgb(218, 205, 159);
+$oranye:hsl(28, 84%, 58%);
+$light:rgb(230, 223, 207);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $poesten-one, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  background-color: $bgbody-color;
+  color: whitesmoke;
+  letter-spacing: 1.5px;
+}
+
+header {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 10px 15px;
+  
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: $dark;
+  padding: 5px;
+  z-index: 100;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.skip-link:focus {
+  top: 10px;
+  left: 10px;
+}
+
+.app-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.navbar-transparent {
+  background-color: transparent;
+}
+
+
+.scrolled {
+  background-color: $dark;
+}
+
+
+.brand h1 {
+  font-size: 20px;
+  color: $coklat;
+}
+
+.nav-menu {
+  display: none;
+  list-style: none;
+}
+
+.nav-menu li {
+  margin-right: 20px;
+}
+
+.nav-menu li:last-child {
+  margin-right: 0;
+}
+
+.nav-menu li a {
+  color: whitesmoke;
+  text-decoration: none;
+
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 10px;
+  line-height: 44px;
+}
+
+.nav-menu li a:hover {
+  color: $coklat;
+}
+
+.nav-toggle {
+  min-width: 44px;
+  min-height: 44px;
+  margin-top: 0;
+  color: rgb(218, 205, 159);
+  background-color: transparent;
+  font-size: 25px;
+}
+
+.nav-toggle:hover {
+  background-color: transparent;
+}
+
+.nav-drawer {
+  width: 200px;
+  transition: background-color 0s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  height: 100%;
+  padding-top: 50px;
+  transition: left 0.3s ease;
+  z-index: 10;
+}
+
+.nav-drawer.active {
+  left: 0;
+}
+
+.nav-drawer ul {
+  list-style: none;
+  margin-top: 30px;
+}
+
+.nav-drawer li {
+  margin-bottom: 10px;
+}
+
+.nav-drawer a {
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 10px;
+  min-height: 44px;
+  min-width: 44px;
+  display: block;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.nav-drawer a:hover {
+  color: $coklat;
+}
+
+.description {
+  position: absolute;
+  text-align: center;
+  z-index: 9;
+  margin: auto;
+  padding: 20px;
+}
+
+.description h1 {
+  color: $coklat;
+  text-shadow: 0 0 3px $dark;
+  margin: 35px 0 10px;
+  font-size: 20px;
+}
+
+.description p {
+  font-family: "Poppins";
+  font-size: 9px;
+  letter-spacing: 0;
+  text-shadow: 0 0 3px $dark;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+}
+
+.container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container h1 {
+  color: $coklat;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.restaurants {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.cards {
+  background-color: rgb(230, 223, 207);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+}
+
+.cards img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.cards p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
+  font-size: 9px;
+}
+
+.restaurants h2 {
+  color: $oranye;
+  font-size: 20px;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+.restaurants h4 {
+  color: $coklat;
+  font-size: 13px;
+}
+
+.cards p,
+h4 {
+  margin: 10px 20px;
+  color: $coklat;
+}
+
+.image-container {
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.zoom-image {
+  transition: transform 0.3s ease;
+}
+
+.zoom-image:hover {
+  transform: scale(1.1);
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $coklat;
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.detail-restaurant {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.image-container-detail img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.restaurant__name {
+  font-size: 4rem;
+  margin: 20px 0;
+  color: $coklat;
+  text-align: center;
+}
+
+.restaurant__info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: $coksu;
+  text-align: center;
+}
+
+.restaurant__info h4 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: $oranye;
+}
+
+.restaurant__info p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: $coklat;
+}
+
+.restaurant__menu h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: $coksu;
+  text-align: center;
+}
+
+.restaurant__menu h4 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: $oranye;
+}
+
+.restaurant__menu ul {
+  list-style-type: none;
+}
+
+.restaurant__menu li {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: $coklat;
+  display: inline-block;
+}
+
+.restaurant__reviews h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: $coksu;
+  text-align: center;
+}
+
+.detail-goup {
+  background: $light;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.review h4 {
+  font-size: 1.2rem;
+  color: $oranye;
+}
+
+.review p {
+  font-size: 1rem;
+  color: $coklat;
+  margin: 5px 0;
+}
+
+.review small {
+  display: block;
+  text-align: right;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+form h1 {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  color: $coklat;
+}
+
+form {
+  width: 90%;
+  padding: 2rem;
+  background-color: $light;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+label {
+  display: flex;
+  min-height: 44px;
+  min-width: 44px;
+  align-items: center;
+  color: $coklat;
+}
+
+input,
+textarea {
+  width: 100%;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  border: 1px solid $oranye;
+  background-color: $light;
+  font-weight: bold;
+  border-radius: 4px;
+  color: black;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border: 2px solid $coklat;
+}
+
+.search-container{
+  width: 70%;
+  margin: 0 auto 10px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: $oranye;
+  color: $dark;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.favorite h1 {
+  margin-top: 95px;
+}
+
+button:hover {
+  background-color: $coklat;
+  color: whitesmoke;
+}
+
+footer {
+  height: 50px;
+  background-color: $dark;
+  text-align: center;
+  line-height: 50px;
+}
