@@ -1,0 +1,111 @@
+@media screen and (max-width: 700px) {
+    .header-title {
+        display: flex;
+        padding-left: 10px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .navigation-drawer {
+        line-height: 2rem;
+        margin-top: 0px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .navbar-container {
+        top: 100px;
+        background-color: #25282d;
+        width: 100%;
+        top: 50px;
+        position: absolute;
+        -webkit-transform: translate(100%, 0);
+        box-shadow: 0px 6px 8px 1px rgb(0 0 0 / 60%);
+        transform: translate(-120%, 0);
+        transition: transform 0.4s ease;
+        
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .navbar-item {
+        display: list-item;
+        width: 100%;
+    }
+
+    .navigation-responsive {
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 10px;
+    }
+
+    .header-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0px 30px;
+        margin-top: 0;
+    }
+}
+
+
+@media screen and (min-width: 510px){
+
+    .restaurant-information-title {
+        font-size: 19px;
+    }
+
+    .restaurant-information-rating {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .restaurant-information-description {
+        font-size: 13px;
+    }
+
+}
+
+
+
+@media screen and (min-width: 660px) {
+    .content-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 12px;
+        grid-row-gap: 16px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .navigation-responsive {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 960px) {
+
+    .restaurant-information-title {
+        font-size: 20px;
+    }
+
+    .content-card {
+        display: grid;
+        padding: 25px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero {
+        min-width: 1000px;
+    }
+    
+    main {
+        max-width: 1200px
+    }
+}

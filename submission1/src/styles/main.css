@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: black;
+  background-color: #bec3ce;
+}
+
+/*skip to content btn*/
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #25282d;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+ 
+.skip-to-content:focus {
+   top: 0;
+}
+
+/*header*/
+header {
+  min-height: 56px;
+  transition: min-height 0.3s;
+  background-color: transparent;
+}
+
+header .navbar {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  
+  z-index: 999;
+  transition: background-color 0.5s ease-in-out;
+}
+
+
+header .header-inner {
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header .header-inner .header-title {
+  font-size: 1.6rem;
+  color: white;
+  
+}
+
+/*header-navigation drawer*/
+header .header-inner .navigation-responsive .navigation-drawer {
+  font-size: 31px;
+  margin-top: 10px;
+  display: block;
+  width: 44px;
+  height: 44px;
+}
+
+/*header-navbar*/
+header .navbar .navbar-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+header .navbar-container .navbar-list {
+  display: flex;
+  width: 70%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  justify-items: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .navbar-container .navbar-list .navbar-item {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 40%;
+  line-height: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+header .navbar-container .navbar-list .navbar-item a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: .8rem;
+  font-weight: 700;
+  color: white;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px;
+  transition: all .2s ease-in-out;
+}
+
+header .navbar-container .navbar-list .navbar-item a:hover {
+  text-decoration: none;
+  font-weight: 700;
+  color:red;
+}
+
+/*header-hero*/
+header .hero {
+  display: flex;
+  min-height: 380px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../public/images/heros/hero-image_2.jpg");
+}
+
+header .hero .hero-container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+header .hero .hero-container .hero-title {
+  color: white;
+  font-weight: 550;
+  font-size: 3rem;
+}
+
+header .hero .hero-container .hero-description {
+  color: white;
+  margin-top: 15px;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+/*main*/
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main .content-header {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+main .content-header .content-header-title {
+  padding-top: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: white
+}
+
+main .content-card {
+  padding: 25px;
+  text-align: left;
+  overflow: auto;
+}
+
+span {
+  color: red;
+}
+
+
+.content-list {
+  margin: 11px 0;
+  box-shadow: 0px 6px 8px 1px rgb(0 0 0 / 60%);
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.content-image {
+  max-height: 160px;
+  min-width: 150px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+.restaurant-information {
+  padding: 18px 32px 32px 32px;
+}
+
+.restaurant-information-title:hover {
+  opacity: 0.75;
+}
+
+.restaurant-information-rating {
+  background-color: #7e8592;
+  border-radius: 15px;
+  margin-top: 5.4px;
+  color: white;
+  padding: 3px 10px;
+}
+
+.restaurant-information-description {
+  margin-top: 5.4px;
+}
+
+footer {
+  background-color: #25282d;
+  color: white;
+  width:100%;
+  text-align: center;
+  padding: 20px;
+  font-weight: 700;
+}
